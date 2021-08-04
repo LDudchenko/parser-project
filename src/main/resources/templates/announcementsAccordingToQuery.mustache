@@ -1,0 +1,15 @@
+{{> header}}
+<div class="container">
+    {{#quantity}}
+        <p class="quantity">Усього нових пропозицій: <span>{{quantity}}</span></p>
+    {{/quantity}}
+            <ol>
+        {{#newAnnouncements}}
+            <li>{{.}}</li>
+        {{/newAnnouncements}}
+        {{^newAnnouncements}}
+            <p class="nothing">На даний момент немає оновлень</p>
+        {{/newAnnouncements}}
+    </ol>
+</div>
+{{> footer}}

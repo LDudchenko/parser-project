@@ -1,0 +1,25 @@
+{{> header}}
+<div class="container">
+    <div class="creating">
+        <p class="note">Оберіть тип нерухомості:</p>
+        <form action="createNewQuery" method="post" modelAttribute="queryForParsingDTO">
+            <select class="custom-select" name="realtyType">
+                <option selected="selected" value="Квартири, кімнати">Квартири, кімнати</option>
+                <option value="Будинки">Будинки</option>
+                <option value="Земля">Земля</option>
+                <option value="Гаражі, парковки">Гаражі, парковки</option>
+                <option value="Подобова оренда житла">Подобова оренда житла</option>
+            </select>
+            <p class="note">Оберіть місто:</p>
+            <select class="custom-select" name="city">
+                <option selected="selected" value="Васильків">Васильків</option>
+                <option value="Обухів">Обухів</option>
+                <option value="Баришів">Баришів</option>
+                <option value="Фастів">Фастів</option>
+                <option value="Бориспіль">Бориспіль</option>
+            </select>
+            <button class="btn btn-primary" type="submit">Створити</button>
+        </form>
+    </div>
+</div>
+{{> footer}}

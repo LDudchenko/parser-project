@@ -1,0 +1,26 @@
+{{> header}}
+<div class="container">
+<ul class="announcements">
+{{#queryForParsingList}}
+    <li class="announcements">
+        <p class="announcements">{{description}}</p>
+    <div class="wrapper">
+        <form action="newAnnouncements{{nameOfFile}}">
+            <input type="hidden" value="{{description}}">
+            <button type="submit" class="btn btn-warning">Нові пропозиції</button>
+        </form>
+        <form action="/update/{{nameOfFile}}">
+            <button type="submit" class="btn btn-success">Оновити цей запит</button>
+        </form>
+    </div>
+    </li>
+{{/queryForParsingList}}
+{{^queryForParsingList}}
+    <p>Нема створених запросів для парсінгу</p>
+{{/queryForParsingList}}
+</ul>
+    {{#isExist}}
+        <a href="/update" class="update">Оновити усі перелічені вище запити</a>
+    {{/isExist}}
+</div>
+{{> footer}}
